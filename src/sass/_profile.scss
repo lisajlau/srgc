@@ -1,0 +1,12 @@
+.profile-div {
+  display: flex; 
+  .profile-pic {
+    img {
+      width: 100%;
+    }
+  }
+  > div {
+    flex: 1 100%;
+    padding: 10px;
+  }
+}

@@ -156,11 +156,14 @@
 }
 
 .headerbar {
-    height: 40px;
+    height: 60px;
     width: 100%;
     .logo {
         background-image: url('../images/logo.jpg');
         background-size: contain;
+        background-repeat: no-repeat;
         height: 100%;
+        width: 60px;
+        display: inline-block;
     }
 }

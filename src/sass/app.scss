@@ -4,6 +4,7 @@
 @import 'header';
 @import 'scroll';
 @import 'cta';
+@import 'profile';
 
 html, body {
     height: 100%;
@@ -58,10 +59,6 @@ a {
     height: 100%;
 }
 
-.bg-black {
-    background-color: $dark-gray;
-}
-
 .bg-gray {
     background-color: $fade-gray;
 }
@@ -111,12 +108,11 @@ a {
     margin: 0;
     padding: 0;
     position: relative;
-    height: 150px;
+    height: 450px;
     
     > div {
         text-align: center;
         border-bottom: 1px solid #e5e5e5;
-        min-height: 500px;
         height: 100%;
         padding: 0;
         margin: 0;
@@ -142,7 +138,7 @@ a {
                 height: 50px;
             }
             margin: 0;
-            padding-top: 200px;
+            padding-top: 100px;
             color: $white;
         }
         div.motto {
@@ -168,14 +164,6 @@ section {
     .grid {
         flex: 1 50%;
         margin: 10px;
-    }
-}
-
-.logo-div {
-    padding: 60px;
-    
-    img {
-        max-height: 70px;
     }
 }
 
@@ -289,11 +277,6 @@ p {
     .flex-grid {
         display: block;
     }
-    .featured-div {
-        min-height: 320px;
-        background-size: 500px;
-        background-attachment: scroll;
-    }
     
     .jumbotron.main > div div.message div p {
         width: 100%;
@@ -311,9 +294,6 @@ p {
 }
 
 @media screen and (min-width: 1500px) {
-    .featured-div {
-        min-height: 650px;
-    }
     
     .jumbotron.team {
         min-height: 550px;
