@@ -1,0 +1,90 @@
+.toggle-button {
+    transition: all .5s cubic-bezier(.7,0,.3,1);
+    width: 34px;
+    height: 34px;
+    display: block;
+
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    z-index: 10;
+
+    .lines {
+        top: 50%;
+        transition: all .3s cubic-bezier(.7,0,.3,1);
+        position: relative;
+        width: 100%;
+        height: 4px;
+        background-color: $white;
+        display: block;
+    }
+
+    .lines:before {
+        top: -10px;
+    }
+
+    .lines:after {
+        top: 10px;
+    }
+
+
+    .lines:after, .lines:before {
+        transition: all .3s cubic-bezier(.7,0,.3,1);
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $white;
+        display: block;
+        content: '';
+    }
+}
+
+.toggle-button.black {
+    .lines, .lines:after, .lines:before {
+        background-color: $black;
+    }
+}
+
+.toggle-button.toggle {
+
+    .lines {
+        background-color: transparent!important;
+    }
+
+    .lines:before {
+        background-color: $black;
+        transform: translateY(0)rotate(-45deg);
+        top: 0;
+    }
+
+    .lines:after {
+        background-color: $black;
+        transform: translateY(0)rotate(45deg);
+        top: 0;
+    }
+}
+
+.toggle-button:hover {
+
+    .lines:before {
+        top: -12px;
+    }
+
+    .lines:after {
+        top: 12px;
+    }
+}
+
+.toggle-button.toggle:hover {
+
+    .lines:before {
+        transform: translateY(0)rotate(-40deg);
+        top: 0;
+    }
+
+    .lines:after {
+        transform: translateY(0)rotate(40deg);
+        top: 0;
+    }
+}

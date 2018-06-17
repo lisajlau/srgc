@@ -1,0 +1,157 @@
+.header.main {
+    .navbar {
+        margin-top: 30px;
+        margin-right: 40px;
+        
+        .navbar-toggle .icon-bar {
+                background: $white;
+        }
+    }
+    
+    .side-navigation {
+        top: 40px;
+        
+        > ul > li a {
+            color: $white;
+        }
+    }
+}
+
+.header.black {
+    .navbar {
+        
+        .navbar-toggle .icon-bar {
+                background: $black;
+        }
+    }
+    
+    .side-navigation {
+        
+        > ul > li a {
+            color: $black;
+        }
+    }
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10; 
+    
+    .navbar {
+        margin: 20px;
+        
+        .navbar-header {
+            float: none;
+            margin: 0 20px;
+        }
+        
+        .navbar-toggle {
+            float: right;
+            
+            .icon-bar {
+                background: $white;
+            }
+        }
+    }
+    
+    .navbar-brand {
+        padding: 5px;
+        position: absolute;
+        top: 0;
+        left: 40px;
+        z-index: 9;
+        img {
+            width: 60px;
+            display: inline-block;
+        }
+    }
+    
+    
+    #nav ul {
+        background: #fff;
+        /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+        background: rgba(255, 255, 255, 0);
+        /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+        list-style: none;
+        position: absolute;
+        left: -9999px;
+        /* Hide off-screen when not needed (this is more accessible than display:none;) */
+    }
+    
+    #nav ul li {
+        margin:0;
+        padding:0;
+        background: rgba(231, 231, 231, 0.4);
+    }
+    #nav ul a {
+        white-space: nowrap;
+        /* Stop text wrapping and creating multi-line dropdown items */
+    }
+    #nav li:hover ul {
+        /* Display the dropdown on hover */
+        left: 0;
+        padding: 0;
+    }
+    
+    #nav li ul a {
+        /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+        text-decoration: none;
+        text-align: left;
+        width: 100%;
+        padding: 8px 15px;
+        display: block;
+        color: $black;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    
+    #nav li ul a:hover {
+        color: $gray-dark;
+    }
+}
+
+
+    
+.side-navigation {
+    padding-left: 120px; 
+    padding-right: 90px; 
+    list-style: none;
+    text-align: center;
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    top: 30px;
+    
+    > ul > li {
+        display: inline-block;
+        padding: 10px 15px;
+
+        a {
+            color: $white;
+            text-transform: uppercase;
+            display: inline;
+            padding: 2px;
+            letter-spacing: 1px;
+            background-color: transparent !important;
+        }
+
+    }
+
+    > ul > li:hover > a {
+        border-bottom: solid 5px $gray;
+    }
+
+    > ul > li.active a {
+        border-bottom: solid 5px $gray-dark;
+    }
+}
+
+.navbar-cta {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    
+}

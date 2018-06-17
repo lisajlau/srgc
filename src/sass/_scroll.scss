@@ -1,0 +1,10 @@
+.scroll-snapper {
+    
+  scroll-snap-points-y: repeat(100%);
+  scroll-snap-type: mandatory;
+  scroll-snap-destination: 100% 0%;
+    
+    .page {
+        
+    }
+}

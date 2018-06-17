@@ -1,0 +1,322 @@
+@import 'var';
+@import 'toggleBtn';
+@import 'mainMenu';
+@import 'header';
+@import 'scroll';
+@import 'cta';
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    padding: 0; 
+    font-family: 'Roboto', 'Helvetica Nueu', 'Helvetica', 'Arial', san-serif;
+    font-size: 15px;
+}
+ 
+.title {
+    font-family: 'Georgia', 'Helvetica Nueu', 'Helvetica', 'Arial', serif;
+    font-weight: 500;
+}
+ 
+.hide {
+    display: none !important;
+}
+
+a {
+    cursor: pointer;
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+}
+ 
+.heading {
+        > h2 {
+        font-weight: 700;
+        font-size: 36px;
+        color: #424242;
+        line-height: 38px;
+        text-transform: uppercase;
+        border-bottom: thick solid $divider-color;
+        margin: 15px 0 25px 0;
+        float: left;
+        padding: 10px 10px 12px 0;
+    }
+}
+.heading:after {
+    content: '';
+    height: 1px;
+    clear: both;
+    display: block;
+}
+
+.view {
+    position: relative;
+    height: 100%;
+}
+
+.bg-black {
+    background-color: $dark-gray;
+}
+
+.bg-gray {
+    background-color: $fade-gray;
+}
+
+.section {
+    padding: 30px 0 40px 0;
+}
+
+.bg-fade {
+    background-color: $fade-white;
+}
+
+.centerize {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.notes {
+    text-align: justify;
+}
+
+.jumbotron {
+    transition: all 0.3s;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    .page-title {
+        font-family: 'Georgia', 'Helvetica Nueu', 'Helvetica', 'Arial', serif;
+        position: absolute;
+        top: 200px;
+        text-align: center;
+        left: 0;
+        right: 0;
+        h2 { font-size: 50px;}
+       
+    }
+    
+    .page-title.white {
+        color: $white;
+    }
+}
+
+.jumbotron.main {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    
+    > div {
+        text-align: center;
+        border-bottom: 1px solid #e5e5e5;
+        min-height: 500px;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: black;
+        background-size: cover;
+        background-image: url('../images/bg-main.jpg');
+        background-position: center;
+        div.message {
+            div {
+                p {
+            text-align: center;
+                    margin: 20px auto;
+                    font-size: 48px;
+                    width: 500px;
+                }
+            }
+            img {
+                height: 50px;
+            }
+            margin: 0;
+            padding-top: 200px;
+            color: $white;
+        }
+        div.motto {
+            text-align: center;
+            margin: 0;
+            color: $white;
+            .carousel-control, .carousel-indicators {
+                display:none;
+            }
+            div p {
+                font-size: 28px;
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+section {
+    padding: 30px 0;
+}
+.flex-grid {
+    display: flex;
+    .grid {
+        flex: 1 50%;
+        margin: 10px;
+    }
+}
+
+.logo-div {
+    padding: 60px;
+    
+    img {
+        max-height: 70px;
+    }
+}
+
+section.contact-section {
+    background-color: $fade-gray;
+    padding: 40px 0;
+    
+    .map {
+        margin: 20px 0;
+        width: 200px;
+    }
+    
+    .grid {
+        flex: 1 50%;
+    }
+    
+    h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    a {
+        margin: 0 10px;
+    }
+    a i {
+        text-align: center;
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+        font-size: 30px;
+        border-radius: 99px;
+        border: solid 1px #333;
+        display: inline-block;
+    }
+    a.cta.linkedin i {
+        color: #0976b4;
+        border-color: #0976b4;
+    }
+    a.cta.mail i {
+        color: #0099CC;
+        border-color: #0099CC;
+    }
+    a.cta.phone i {
+        color: #34af23;
+        border-color: #34af23;
+    }
+    a.cta.linkedin i:hover {
+        background-color: #0976b4;
+        color: #fff;
+    }
+    a.cta.mail i:hover {
+        background-color: #0099CC;
+        color: #fff;
+    }
+}
+
+.modal-dialog {
+    margin-top: 60px;
+}
+
+.modal-body.partner-profile {
+    min-height: 400px;
+    z-index: 1;
+}
+
+.accordion-heading {
+    text-transform: capitalize;   
+}
+
+p {
+    text-align: justify;
+}
+
+.navigation ul {
+    padding: 0;
+}
+
+/* Custom page footer */
+
+.footer {
+    padding-top: 2px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    
+    p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+     
+    .header .navbar {
+        margin: 20px 0;
+    }
+    media-page .title-media {
+        height: 90px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .jumbotron.main > div {
+        background-image: url('../images/bg-main-mob.jpg');
+    }
+    
+    .flex-grid {
+        display: block;
+    }
+    .featured-div {
+        min-height: 320px;
+        background-size: 500px;
+        background-attachment: scroll;
+    }
+    
+    .jumbotron.main > div div.message div p {
+        width: 100%;
+        font-size: 26px;
+    }
+    .jumbotron.main > div div.motto div p {
+        font-size: 22px;
+    }
+    .jumbotron .page-title.white {
+        top: 150px;
+    }
+    .modal-dialog {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .featured-div {
+        min-height: 650px;
+    }
+    
+    .jumbotron.team {
+        min-height: 550px;
+    }
+    
+}
